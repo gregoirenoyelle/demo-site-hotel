@@ -68,7 +68,7 @@ function backcountry_no_nav_class( $classes ) {
 add_filter( 'genesis_search_text', 'chgor_search_text' );
 function chgor_search_text( $text ) {
 
-	return esc_attr( __( 'Search the site ...', 'magazine' ) );
+	return esc_attr( __( 'Chercher sur le site...', 'magazine' ) );
 
 }
 
