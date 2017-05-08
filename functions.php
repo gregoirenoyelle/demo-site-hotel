@@ -9,8 +9,8 @@ include_once( get_stylesheet_directory() . '/lib/theme-defaults.php' );
 load_child_theme_textdomain( 'magazine', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'magazine' ) );
 
 //* Child theme (do not remove)
-define( 'CHILD_THEME_NAME', __( 'CHG Mont d\'OR', 'magazine' ) );
-define( 'CHILD_THEME_URL', 'http://www.xilicloud.eu//' );
+define( 'CHILD_THEME_NAME', __( 'Site Hotel', 'magazine' ) );
+define( 'CHILD_THEME_URL', 'https://www.gregoirenoyelle.com/' );
 define( 'CHILD_THEME_VERSION', '1.0.1' );
 
 //* Enqueue Google Fonts and JS script
@@ -142,4 +142,3 @@ genesis_register_sidebar( array(
 
 // gn fichiers perso
 require_once( CHILD_DIR.'/lib-gn/functions-sup.php' );
-require_once( CHILD_DIR.'/lib-gn/functions-michel.php' );
