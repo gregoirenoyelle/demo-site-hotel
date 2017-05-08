@@ -1,4 +1,4 @@
-# Thème CHG Mont d'OR
+# Site de démo pour WP 3
 
 * Thème enfant Genesis sur mesure
-* CSS avec SASS
+* A partir du thème Genesis Sample
