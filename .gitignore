@@ -41,10 +41,5 @@ Thumbs.db
 # gncomsup sass #
 ######################
 _st/
-screenshot.png
-*.codekit
-images/
-lib-gn/styles/.sass-cache/
-editor-style.css
-style.css
-style.css.map
+
+
