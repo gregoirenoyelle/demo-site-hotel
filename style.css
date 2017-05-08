@@ -219,7 +219,7 @@ Defaults
 /* Typographical Elements
 --------------------------------------------- */
 body {
-    background-color: #f2f2f2;
+    background-color: #f7f7f7;
     color: #222;
     font-family: "Roboto", sans-serif;
     font-size: 16px;
@@ -1712,7 +1712,7 @@ Sidebars
 Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
 .footer-widgets {
-    background-color: #efefef;
+    background-color: #dcdcdc;
     color: #222;
     clear: both;
     font-size: 14px;
@@ -1774,7 +1774,7 @@ Footer Widgets
 Site Footer
 ---------------------------------------------------------------------------------------------------- */
 .site-footer {
-    background-color: #efefef;
+    background-color: #dcdcdc;
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
     text-align: center;
