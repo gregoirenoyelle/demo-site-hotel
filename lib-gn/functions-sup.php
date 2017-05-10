@@ -3,7 +3,7 @@
  * Fonctions suplémentaires du thème
  *
  * @author Grégoire Noyelle
- * @package CHG Mont d'Or
+ * @package Le Grand Large
  * @subpackage Customizations
  */
 
@@ -45,18 +45,18 @@ if (!function_exists('aff_ve')) {
 ///////////////////////
 
 // style css tinyMCE
-function chgor_editor_styles() {
+add_action( 'init', 'grandl_editor_styles' );
+function grandl_editor_styles() {
 	add_editor_style( 'editor-style.css' );
 }
-add_action( 'init', 'chgor_editor_styles' );
 
 //* gnaction Add background_color support
 add_theme_support( 'custom-background' );
 
 
 // footer changer Copyright test
-add_filter('genesis_footer_creds_text', 'chgor_texte_copyright');
-function chgor_texte_copyright($creds) {
+add_filter('genesis_footer_creds_text', 'grandl_texte_copyright');
+function grandl_texte_copyright($creds) {
 $creds = "Copyright [footer_copyright]";
 return $creds;
 }
@@ -94,16 +94,25 @@ if ( ! function_exists( 'get_field' ) ) {
 ///////////////////////
 
 //* Modification des template
-add_action( 'genesis_meta', 'chgor_add_template_element' );
-function chgor_add_template_element() {
+add_action( 'genesis_meta', 'grandl_add_template_element' );
+function grandl_add_template_element() {
 
-	// Ajout Image une dans les pages
+	// Ajout Image à la une une dans les pages
 	if ( is_singular( array('page','post') ) ) {
 		if ( !has_post_thumbnail() ) return;
 		add_action( 'genesis_before_entry', 'chgor_post_thumbnail_page');
 		function chgor_post_thumbnail_page() {
 			the_post_thumbnail( 'large');
 		}
+	}
+}
+
+
+//* Changer le nombre d'article par page pour l'archive des équipes
+add_action( 'pre_get_posts', 'grandl_post_type_archive_number' );
+function grandl_post_type_archive_number( $query ) {
+	if ( $query->is_main_query() && !is_admin() && $query->is_post_type_archive('equipe') ) {
+		$query->set( 'posts_per_page', '50' );
 	}
 }
 
