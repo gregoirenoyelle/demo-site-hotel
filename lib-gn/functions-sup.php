@@ -116,10 +116,8 @@ function grandl_post_type_archive_number( $query ) {
 	}
 }
 
-
-
-
-
+// Enlever la description des archives avant le contenu
+remove_action( 'genesis_before_loop', 'genesis_do_taxonomy_title_description', 15 );
 
 
 
