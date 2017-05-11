@@ -154,7 +154,7 @@ body > div {
 body {
     background-color: #eee;
     color: #333;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 20px;
     font-size: 2rem;
     -webkit-font-smoothing: antialiased;
@@ -255,7 +255,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 600;
     line-height: 1.2;
     margin: 0 0 10px;
@@ -819,9 +819,16 @@ th:first-child {
 }
 
 .widget-title {
+    clear: both;
     font-size: 18px;
     font-size: 1.8rem;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+}
+
+.home .content .widget-title, .sidebar .widget-title {
+    padding: 10px 0;
+    border-bottom: 4px solid #F5B03E;
 }
 
 /* ## WordPress
@@ -956,6 +963,11 @@ img.alignright,
     font-size: 20px;
     font-size: 2rem;
 }
+
+.content .home-bottom .featured-content .entry, .sidebar .featured-content .entry {
+    border-bottom: 2px solid #eee;
+}
+
 
 
 /* # Plugins
