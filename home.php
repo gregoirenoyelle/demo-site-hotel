@@ -20,7 +20,7 @@ function chgor_home_genesis_meta() {
 		add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
 
 		// Remove main navigation
-		remove_action( 'genesis_after_header', 'genesis_do_subnav' );
+		remove_action( 'genesis_after_header', 'genesis_do_nav' );
 
 		// Add magazine-home body class
 		add_filter( 'body_class', 'chgor_body_class' );
