@@ -579,11 +579,11 @@ th:first-child {
     clear: both;
     padding-top: 40px;
     word-wrap: break-word;
-    border-top: 3px solid gainsboro; 
 }
 
 .home .site-inner {
     padding-top: initial;
+    border-top: 3px solid gainsboro; 
 }
 
 .landing-page .site-inner {
@@ -746,6 +746,7 @@ th:first-child {
     font-size: 1.6rem;
     margin-bottom: 1px;
     padding: 12px 0px;
+    border-bottom: 1px solid #c2c2c2;
 }
 
 .after-entry,
@@ -1133,7 +1134,7 @@ img.alignright,
 .site-header .widget-area {
     float: right;
     text-align: right;
-    width: 800px;
+    width: 51%;
 }
 
 
@@ -1663,8 +1664,7 @@ p.entry-meta {
         width: 920px;
     }
 
-    .content,
-    .site-header .widget-area {
+    .content {
         width: 800px;
     }
 
@@ -2022,7 +2022,7 @@ p.entry-meta {
 
 
 /* CSS avec Grid Layout */
-@supports (display: grid) {
+@supports (display: gridou) {
 
     /* Widgets Accueil */
 
