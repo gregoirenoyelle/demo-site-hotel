@@ -1279,15 +1279,17 @@ img.alignright,
 
 .nav-primary {
     background-color: #fff;
-    border-top: 1px solid #eee;
 }
 
 .nav-primary .menu-item {
-    width: 33.2%;
+    width: 32.2%;
+    display: block;
+    float: left;
+    margin-right: 0.5%;
 }
 
 .nav-primary .menu-item:nth-of-type(3n+3) {
-    margin-right: -4px;
+    margin-right: initial;
 }
 
 .nav-primary .sub-menu .menu-item {
@@ -1304,8 +1306,12 @@ img.alignright,
     color: #fff;
 }
 
-.nav-primary a:hover, .nav-secondary .current-menu-item > a, .nav-secondary .sub-menu .current-menu-item > a:hover {
+.nav-primary a:hover, 
+.nav-secondary .current-menu-item > a, 
+.nav-secondary .sub-menu .current-menu-item > a:hover {
     background-color: #297c9e;
+    color: #fff !important;
+    text-decoration: none;
 }
 
 /* ## Footer Navigation
@@ -1869,6 +1875,24 @@ p.entry-meta {
         width: 100%;
     }
 
+    .nav-primary .menu-item a {
+        min-height: 74px;
+    }      
+
+}
+
+@media screen and (max-width: 600px) {
+    .nav-primary .menu-item {
+        width: 100%;
+        float: initial;
+        margin-right: 0;
+        margin-bottom: 4px;
+    }
+
+    .nav-primary .menu-item a {
+        min-height: initial;
+    } 
+     
 }
 
 
