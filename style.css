@@ -256,7 +256,7 @@ h4,
 h5,
 h6 {
     font-family: "Raleway", sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.2;
     margin: 0 0 10px;
 }
@@ -1361,6 +1361,50 @@ img.alignright,
     color: #eee;
 }
 
+
+/* ## Accueil
+--------------------------------------------- */
+
+.home-top {
+    width: 63%;
+    float: left;
+}
+
+.home-news {
+    width: 33%;
+    float: right;
+}
+
+.home-news .featured-content .entry {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+.home-news .featured-content .entry:last-child {
+    border-bottom: initial;
+}
+
+.home-middle {
+    clear: both;
+}
+
+.home-middle .widget {
+    float: left;
+    margin-right: 2%;
+    width: 32%;
+}
+
+.home-middle .widget:last-child {
+    margin-right: initial;
+}
+
+.home-middle .entry-title {
+    text-align: center;
+    font-size: 25px;
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
 /* ## Entry Meta
 --------------------------------------------- */
 
@@ -1674,6 +1718,10 @@ p.entry-meta {
     .site-title {
         text-align: center;
     }
+
+    .title-area {
+        background: initial;
+    }    
 
     .site-header .search-form {
         margin: 16px auto;
