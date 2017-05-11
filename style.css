@@ -1644,6 +1644,12 @@ p.entry-meta {
         max-width: 960px;
     }
 
+    .home-top,
+    .home-news {
+        width: initial;
+        float: initial;
+    }
+
     .content-sidebar-sidebar .content-sidebar-wrap,
     .sidebar-content-sidebar .content-sidebar-wrap,
     .sidebar-sidebar-content .content-sidebar-wrap {
@@ -1925,7 +1931,12 @@ p.entry-meta {
 
     .nav-primary .menu-item a {
         min-height: 74px;
-    }      
+    }   
+
+    .home-middle .widget {
+        width: initial;
+        float: initial;
+    }   
 
 }
 
