@@ -1049,7 +1049,7 @@ img.alignright,
 .title-area {
     float: left;
     padding-top: 0px;
-    width: 50%;
+    width: 32%;
     background: transparent url("images/logo-chg-or-2.png") no-repeat 0 0;
 }
 
@@ -1231,6 +1231,36 @@ img.alignright,
 .site-header .genesis-nav-menu li li {
     margin-left: 0;
 }
+
+.site-header .genesis-nav-menu a {
+    padding: 1px 7px;
+    font-size: 15px;
+    border-left: 2px solid #BDBBBB;
+    color: #BDBBBB;
+    text-decoration: none;
+}
+
+.site-header .genesis-nav-menu a:hover {
+    color: #222;
+}
+
+.site-header .genesis-nav-menu .current-menu-item > a {
+    color: #222;
+}
+
+.site-header .genesis-nav-menu li:first-child a {
+    border-left: none;
+}
+
+.site-header .sub-menu {
+    border-top: 1px solid #222;
+}
+
+.site-header .sub-menu .sub-menu {
+    margin-top: -54px;
+}
+
+
 
 /* ## After Header Navigation
 --------------------------------------------- */
