@@ -19,6 +19,9 @@ function chgor_home_genesis_meta() {
 		// Force content-sidebar layout setting
 		add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
 
+		// Remove main navigation
+		remove_action( 'genesis_after_header', 'genesis_do_subnav' );
+
 		// Add magazine-home body class
 		add_filter( 'body_class', 'chgor_body_class' );
 
