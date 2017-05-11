@@ -7,12 +7,13 @@ function grandl_options_modele() {
 		add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
 		// Enlever le fil d'Ariane
 		remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
+		remove_action( 'genesis_before_loop', 'genesis_do_cpt_archive_title_description');
 		// pour enlever l'image à la une générée automatiquement
-		remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );		
+		remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
 		// pour enlever le contenu de l'éditeur (contenu classique ou extrait)
-		remove_action( 'genesis_entry_content', 'genesis_do_post_content' );		
+		remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
 	}
-	
+
 } // FIN function grandl_options_modele()
 
 // Masquer des éléments de l'interface
@@ -24,7 +25,7 @@ remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 
 // Ajouter l'image de la fiche Equipe avant le titre
 add_action('genesis_entry_header', 'grandl_image_equipe', 5);
-function grandl_image_equipe() { 
+function grandl_image_equipe() {
 // Variables Image
 $image_id = get_field('equipe_photo');
 $img = wp_get_attachment_image($image_id, 'equipe');
@@ -33,14 +34,14 @@ $lien_equipe  = get_permalink();
 ?>
 
 	<figure class="visuel">
-		<?php 
+		<?php
 
 		if ( is_singular('equipe') ) {
 			echo $img;
 		} else {
 			printf('<a href="%s">%s</a>', $lien_equipe, $img);
 		}
-		
+
 		?>
 
 
@@ -50,21 +51,21 @@ $lien_equipe  = get_permalink();
 
 // Ajouter le contenu de la fiche Equipe
 add_action('genesis_entry_content','grandl_fiche_equipe');
-function grandl_fiche_equipe() { 
+function grandl_fiche_equipe() {
 // Lien vers le contenu
 $lien_equipe  = get_permalink();
 ?>
 	<section class="fiche-cuisinier">
-		<a href="mailto:<?php the_field('equipe_email'); ?>">Envoyer un message</a><br>		
+		<a href="mailto:<?php the_field('equipe_email'); ?>">Envoyer un message</a><br>
 
-		<?php 
+		<?php
 
 		if ( is_singular('equipe') ) {
 			printf('<p>%s</p>', the_field('equipe_biographie_longue'));
 		} else {
 			the_field('equipe_biographie_courte');
 			printf('<br><a href="%s">Voir la bio complète</a>', $lien_equipe);
-		}			
+		}
 		?>
 
 	</section>
