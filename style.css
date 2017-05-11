@@ -1057,7 +1057,7 @@ img.alignright,
 }
 
 .site-header > .wrap {
-    padding: 20px 0;
+    padding: 9px 0;
 }
 
 /* ## Title Area
@@ -1436,6 +1436,26 @@ img.alignright,
     width: 38%;
     float: left;
     margin-right: 4%;   
+}
+
+/* ## Page temp 2 columns
+--------------------------------------------- */
+.page-template-p-temp-two-columns .post-edit-link {
+    display: block;
+}
+
+.page-two-column {
+    width: 48%;
+    float: left;
+}
+
+.page-two-column:nth-of-type(2n+1) {
+    clear: left;
+    margin-right: 4%;
+}
+
+.page-two-column:nth-of-type(2n+2) {
+    margin-right: 0;
 }
 
 
@@ -1978,6 +1998,11 @@ p.entry-meta {
         margin-right: initial;
         padding-bottom: 1rem;
     }
+
+    .page-two-column {
+        width: initial;
+        float: initial;
+    }    
 
 }
 
