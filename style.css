@@ -1233,6 +1233,32 @@ img.alignright,
     border-top: 1px solid #eee;
 }
 
+.nav-primary .menu-item {
+    width: 33.2%;
+}
+
+.nav-primary .menu-item:nth-of-type(3n+3) {
+    margin-right: -4px;
+}
+
+.nav-primary .sub-menu .menu-item {
+    width: 100%;
+}
+
+.nav-primary a {
+    background-color: #349CC6;
+    text-align: center;
+    font-weight: 300;
+    font-size: 21px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #fff;
+}
+
+.nav-primary a:hover, .nav-secondary .current-menu-item > a, .nav-secondary .sub-menu .current-menu-item > a:hover {
+    background-color: #297c9e;
+}
+
 /* ## Footer Navigation
 --------------------------------------------- */
 
