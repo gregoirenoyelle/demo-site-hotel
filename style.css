@@ -970,7 +970,9 @@ img.alignright,
     font-size: 2rem;
 }
 
-.content .home-bottom .featured-content .entry, .sidebar .featured-content .entry {
+.content .home-bottom .featured-content .entry, 
+.sidebar .featured-content .entry {
+    padding-bottom: 14px;
     border-bottom: 2px solid #eee;
 }
 
@@ -1398,6 +1400,7 @@ img.alignright,
     float: left;
     margin-right: 2%;
     width: 32%;
+    margin-bottom: 10px;
 }
 
 .home-middle .widget:last-child {
@@ -2022,7 +2025,7 @@ p.entry-meta {
 
 
 /* CSS avec Grid Layout */
-@supports (display: gridou) {
+@supports (display: grid) {
 
     /* Widgets Accueil */
 
@@ -2054,21 +2057,7 @@ p.entry-meta {
 
     .home-middle .featured-content {
         width: initial;
-        margin: initial;
-    }
-
-    /* Menu principal */
-
-    .nav-primary {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 0.3rem;
-    }
-
-    .nav-primary .menu-item {
-        display: grid;
-        width: initial;
-        margin: initial;
+        margin-right;: initial;
     }
 
 
