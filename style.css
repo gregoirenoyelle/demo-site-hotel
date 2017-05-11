@@ -1405,6 +1405,35 @@ img.alignright,
     line-height: 1;
 }
 
+/* ## Contenu équipe 
+--------------------------------------------- */
+
+.post-type-archive-equipe .entry {
+    width: 32%;
+    float: left;
+    margin-right: 2%;
+    padding-bottom: 1rem;
+}
+
+.post-type-archive-equipe .entry:nth-of-type(3n+3) {
+    margin-right: initial;
+}
+
+.post-type-archive-equipe .entry:nth-of-type(3n+1) {
+    clear: left;
+}
+
+.equipe .entry-header .entry-title {
+    margin-top: 10px;
+}
+
+.single-equipe .entry-header img {
+    width: 38%;
+    float: left;
+    margin-right: 4%;   
+}
+
+
 /* ## Entry Meta
 --------------------------------------------- */
 
@@ -1938,6 +1967,13 @@ p.entry-meta {
         float: initial;
     }   
 
+    .post-type-archive-equipe .entry {
+        width: initial;
+        float: initial;
+        margin-right: initial;
+        padding-bottom: 1rem;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -1953,6 +1989,99 @@ p.entry-meta {
     } 
      
 }
+
+
+/* CSS avec Grid Layout */
+@supports (display: grid) {
+
+    /* Widgets Accueil */
+
+    .home .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2rem;
+    }
+
+    .home-top, .home-news, .home-middle {
+        width: initial;
+        margin: initial;
+    }
+
+    .home-top {
+        grid-column: 1 / 3;
+    }
+
+    .home-news {
+        grid-column: 3 / 4
+    }
+
+    .home-middle {
+        grid-column: 1 / 4;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+
+    .home-middle .featured-content {
+        width: initial;
+        margin: initial;
+    }
+
+    /* Menu principal */
+
+    .nav-primary {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0.3rem;
+    }
+
+    .nav-primary .menu-item {
+        display: grid;
+        width: initial;
+        margin: initial;
+    }
+
+
+    /* Archive Equipe */
+
+    .post-type-archive-equipe .content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+        grid-gap: 1.4rem;
+    }
+
+    .post-type-archive-equipe .entry {
+        width: initial;
+        margin: initial;
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 1150px ) {
+
+        .home .content {
+            grid-template-columns: 1fr;
+            grid-column-gap: initial;
+        }
+
+        .home-top, .home-news {
+            grid-column: 1;
+            display: grid;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+
+        .home-middle {
+            grid-template-columns: 1fr;
+        }
+
+        .nav-primary {
+            grid-template-columns: 1fr;
+            grid-row-gap: 0.3rem;
+        }
+    }
+
+} /* FIN @supports (display: grid)  */ 
 
 
 /* # Print Styles
