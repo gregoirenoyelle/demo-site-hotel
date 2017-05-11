@@ -153,6 +153,23 @@ function genesis_sample_comments_gravatar( $args ) {
 
 }
 
+//* Register widget areas
+genesis_register_sidebar( array(
+	'id'          => 'home-top',
+	'name'        => __( 'Home - Top', 'magazine' ),
+	'description' => __( 'This is the top section of the homepage.', 'magazine' ),
+) );
+genesis_register_sidebar( array(
+	'id'          => 'home-bottom',
+	'name'        => __( 'Home - Bottom', 'magazine' ),
+	'description' => __( 'This is the bottom section of the homepage.', 'magazine' ),
+) );
+genesis_register_sidebar( array(
+	'id'          => 'home-middle',
+	'name'        => __( 'Home - Middle', 'magazine' ),
+	'description' => __( 'This is the middle section of the homepage.', 'magazine' ),
+) );
+
 // gn fichiers perso
 require_once( CHILD_DIR.'/lib-gn/functions-sup.php' );
 
