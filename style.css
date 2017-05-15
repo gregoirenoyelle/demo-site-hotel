@@ -1136,7 +1136,7 @@ img.alignright,
 .site-header .widget-area {
     float: right;
     text-align: right;
-    width: 51%;
+    width: 64%;
 }
 
 
@@ -1715,7 +1715,6 @@ p.entry-meta {
 
     .content,
     .site-header .widget-area {
-        width: 620px;
     }
 
     .sidebar-content-sidebar .content,
