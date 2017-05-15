@@ -13,7 +13,7 @@ function site_hotel_filtrer_contenu() {
 
 	// Variable ACF (Vrai/Faux)
 	$masquer_titre = get_field('builder_masquer_titre');
-	$masquer_menu = get_field('builder_masquer_principal');
+	$masquer_menu = get_field('builder_masquer_menu_principal');
 
 	// aff_v($masquer_titre);
 
