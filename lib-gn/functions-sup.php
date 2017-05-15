@@ -57,8 +57,9 @@ add_theme_support( 'custom-background' );
 // footer changer Copyright test
 add_filter('genesis_footer_creds_text', 'grandl_texte_copyright');
 function grandl_texte_copyright($creds) {
-$creds = "Copyright [footer_copyright]";
-return $creds;
+	$mention_legales = get_permalink(17);
+	$creds = sprintf('Copyright [footer_copyright] | <a href="%s">Mentions légales</a>', $mention_legales);
+	return $creds;
 }
 
 
